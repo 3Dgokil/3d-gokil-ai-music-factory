@@ -3,7 +3,7 @@ import re, json
 
 st.set_page_config(
     page_title="3D GOKIL AI Music Factory V1.2 FINAL",
-    page_icon="ðŸ”¥",
+    page_icon="🔥",
     layout="wide"
 )
 
@@ -16,45 +16,45 @@ DNA_RULE = (
     "Humor berasal dari situasi, ironi, permainan kata, dan satire; bukan vulgar."
 )
 
-st.title("ðŸ”¥ 3D GOKIL AI MUSIC FACTORY V1.2 FINAL")
+st.title("🔥 3D GOKIL AI MUSIC FACTORY V1.2 FINAL")
 st.caption("V1 + Song Structure Engine + STORY/SUB-THEME LAB + GOKIL ENGINE + TITLE LAB")
 
 st.info(
-    "DNA 3D GOKIL: REALITA KEHIDUPAN DI BUMI â†’ cerita nyata â†’ sudut pandang serius tapi lucu â†’ "
-    "judul â†’ lirik â†’ Suno â†’ artwork â†’ YouTube SEO."
+    "DNA 3D GOKIL: REALITA KEHIDUPAN DI BUMI → cerita nyata → sudut pandang serius tapi lucu → "
+    "judul → lirik → Suno → artwork → YouTube SEO."
 )
 
 # =========================================================
 # DATA
 # =========================================================
 CATEGORIES = {
-    "ðŸ’° Ekonomi & Uang": [
+    "💰 Ekonomi & Uang": [
         "Gaji dan tanggal tua", "Utang dan cicilan", "Harga kebutuhan naik",
         "Dompet kosong", "Paylater", "Bensin dan biaya hidup",
         "Kerja keras tapi uang cepat habis"
     ],
-    "ðŸ¢ Dunia Kerja": [
+    "🏢 Dunia Kerja": [
         "Bos dan target", "Lembur", "Burnout", "Karyawan serba salah",
         "PHK dan ketidakpastian", "Meeting yang tidak ada habisnya",
         "Kerja sampai lupa waktu"
     ],
-    "ðŸ‘¨â€ðŸ‘©â€ðŸ‘§ Keluarga": [
+    "👨‍👩‍👧 Keluarga": [
         "Ayah dan perjuangan", "Ibu dan pengorbanan", "Anak dewasa",
         "Kebutuhan keluarga", "Orang tua menunggu", "Keluarga sederhana"
     ],
-    "â¤ï¸ Cinta & Hubungan": [
+    "❤️ Cinta & Hubungan": [
         "Mantan muncul lagi", "Cinta sederhana", "Kesepian",
         "Hubungan toxic", "Cinta di warung kopi", "Chat tidak dibalas"
     ],
-    "ðŸ™ï¸ Kehidupan Kota": [
+    "🏙️ Kehidupan Kota": [
         "Kemacetan", "Kota tidak pernah tidur", "Transportasi",
         "Hujan dan perjalanan", "Polusi", "Kesepian di tengah keramaian"
     ],
-    "ðŸ§‘â€ðŸ¤â€ðŸ§‘ Sosial": [
+    "🧑‍🤝‍🧑 Sosial": [
         "Tetangga lebih tahu", "Teman palsu", "Gengsi",
         "Media sosial", "Tekanan sosial", "Orang suka menghakimi"
     ],
-    "ðŸŒ‘ Sisi Gelap Kehidupan": [
+    "🌑 Sisi Gelap Kehidupan": [
         "Kecemasan", "Insomnia", "Takut masa depan",
         "Tekanan hidup", "Merasa tertinggal", "Berjuang tanpa terlihat"
     ],
@@ -196,11 +196,11 @@ STORIES = {
 # =========================================================
 def generic_stories(sub):
     return [
-        (f"{sub.upper()} â€” SISI YANG TIDAK KELIHATAN",
+        (f"{sub.upper()} — SISI YANG TIDAK KELIHATAN",
          f"Di balik {sub.lower()}, ada manusia biasa yang mencoba bertahan menghadapi kebutuhan, tekanan, dan kenyataan sehari-hari. Masalahnya serius, tetapi ia masih bisa menertawakan absurditas hidup."),
-        (f"{sub.upper()} â€” KALAU HIDUP PUNYA SELERA HUMOR",
+        (f"{sub.upper()} — KALAU HIDUP PUNYA SELERA HUMOR",
          f"{sub} terasa berat, tetapi hidup sering punya cara aneh untuk membuatnya semakin lucu. Tokoh utama mencoba tetap waras sambil menghadapi kejadian yang sangat manusiawi."),
-        (f"{sub.upper()} â€” SERIUS, TAPI JANGAN LUPA KETAWA",
+        (f"{sub.upper()} — SERIUS, TAPI JANGAN LUPA KETAWA",
          f"Sebuah cerita tentang {sub.lower()} dari sudut pandang orang biasa: ada konflik nyata, ironi, kejadian kocak, dan pesan bahwa bertahan hidup tidak harus selalu dengan wajah muram.")
     ]
 
@@ -216,7 +216,7 @@ def title_candidates(story_title, target, tone):
         f"{base} | REAL LIFE",
         f"REAL LIFE, REAL PROBLEM | {base}",
         f"{base} | SERIOUS BUT GOKIL",
-        f"3D GOKIL â€” {base}"
+        f"3D GOKIL — {base}"
     ]
     global_ = [
         "REAL LIFE, SERIOUSLY?", "LIFE IS WEIRD",
@@ -258,22 +258,22 @@ def score_title(title, story_title, target):
     return min(50, hook + remember + clarity + family + audience + musical)
 
 def generate_lyrics(title, story, tone):
-    return f"""[Intro â€” Overture & Audio Hook 0:00â€“0:05]
+    return f"""[Intro — Overture & Audio Hook 0:00–0:05]
 [Direct shout + strong guitar + kendang]
 HEY! {title.upper()}!
 
-[Verse 1 â€” 0:05â€“0:30]
+[Verse 1 — 0:05–0:30]
 {story}
 Kita jalan, kita tahan
 Meski hidup kadang kelewatan
 
-[Pre-Chorus â€” 0:30â€“0:45]
+[Pre-Chorus — 0:30–0:45]
 Kalau berat, jangan hilang
 Tarik napas, tetap berjuang
 Kita manusia, bukan mesin
 Masih berdiri, masih yakin
 
-[Chorus / Main Hook â€” starts by 0:45]
+[Chorus / Main Hook — starts by 0:45]
 HIDUP SERIUS, TAPI GOKIL!
 Masalah datang, kita senyum kecil
 HIDUP SERIUS, TAPI GOKIL!
@@ -285,7 +285,7 @@ Kepala panas, tetap sadar
 Dunia kadang tidak masuk akal
 Kita tertawa biar tidak tinggal
 
-[Bridge â€” Mystical]
+[Bridge — Mystical]
 [Gamelan + suling bambu + ruang vokal]
 Di balik tawa ada cerita
 Di balik keras ada manusia
@@ -296,7 +296,7 @@ Still alive, still surviving
 HIDUP SERIUS, TAPI GOKIL!
 Masalah datang, kita senyum kecil
 HIDUP SERIUS, TAPI GOKIL!
-Belum selesai â€” GAS LAGI!
+Belum selesai — GAS LAGI!
 
 [Outro & Retention Loop]
 [Instrumental hit]
@@ -313,7 +313,7 @@ energetic dangdut kendang groove, controlled deep bass, subtle electronic remix,
 dramatic Javanese gamelan and bamboo flute accents, cinematic mystical atmosphere,
 serious real-life Indonesian social satire with witty humor, relatable everyday life,
 all-ages friendly, emotional but energetic, strong final chorus, replayable ending,
-3:20â€“3:40, no long intro, no excessive instrumental solo, no extreme screaming,
+3:20–3:40, no long intro, no excessive instrumental solo, no extreme screaming,
 no muddy bass, no overcrowded arrangement, no excessive EDM."""
 
 def artwork_prompt(title, story, ratio):
@@ -343,31 +343,31 @@ if "final_title" not in st.session_state:
 # SIDEBAR
 # =========================================================
 with st.sidebar:
-    st.header("ðŸ”¥ GOKIL ENGINE")
+    st.header("🔥 GOKIL ENGINE")
     gokil_level = st.slider(
         "GOKIL Level", 1, 5, 3,
-        help="1 humor ringan â€¢ 3 satire kuat â€¢ 5 absurd/dark comedy"
+        help="1 humor ringan • 3 satire kuat • 5 absurd/dark comedy"
     )
-    all_ages = st.checkbox("ðŸ›¡ï¸ All Ages / Family Safe", True)
+    all_ages = st.checkbox("🛡️ All Ages / Family Safe", True)
     st.caption("Humor fokus pada situasi, ironi, satire, dan permainan kata.")
 
 # =========================================================
 # TABS
 # =========================================================
 tabs = st.tabs([
-    "ðŸŽ­ STORY / SUB-THEME LAB",
-    "ðŸŽ¯ TITLE LAB",
-    "âœï¸ LYRIC LAB",
-    "ðŸŽ¸ SUNO STYLE",
-    "ðŸ–¼ï¸ ARTWORK",
-    "ðŸš€ YOUTUBE SEO"
+    "🎭 STORY / SUB-THEME LAB",
+    "🎯 TITLE LAB",
+    "✍️ LYRIC LAB",
+    "🎸 SUNO STYLE",
+    "🖼️ ARTWORK",
+    "🚀 YOUTUBE SEO"
 ])
 
 # ---------------------------------------------------------
 # STORY LAB
 # ---------------------------------------------------------
 with tabs[0]:
-    st.header("ðŸŽ­ Story / Sub-Theme Lab")
+    st.header("🎭 Story / Sub-Theme Lab")
     st.write("Mulai dari DNA 3D GOKIL. Jangan langsung mengejar judul.")
 
     dna = st.text_input("DNA Utama", DNA)
@@ -376,7 +376,7 @@ with tabs[0]:
     custom_subtheme = st.text_input("Sub-tema custom (opsional)")
     chosen_subtheme = custom_subtheme.strip() or subtheme
 
-    if st.button("ðŸ”¥ GENERATE CERITA GOKIL", use_container_width=True):
+    if st.button("🔥 GENERATE CERITA GOKIL", use_container_width=True):
         st.session_state.stories = STORIES.get(chosen_subtheme, generic_stories(chosen_subtheme))
         st.session_state.story_index = 0
         st.session_state.final_title = ""
@@ -394,4 +394,147 @@ with tabs[0]:
         for i, (story_title, story_body) in enumerate(st.session_state.stories):
             with st.container(border=True):
                 st.markdown(f"### {i+1:02d}. {story_title}")
-                st.write(s
+                st.write(story_body)
+                if st.button(f"👉 PILIH CERITA {i+1:02d}", key=f"story_{i}"):
+                    st.session_state.story_index = i
+                    st.session_state.final_title = ""
+                    st.session_state.titles = []
+
+        selected = st.session_state.stories[st.session_state.story_index]
+        st.session_state.story_title = selected[0]
+        st.session_state.story_body = selected[1]
+        st.success(f"✅ Cerita aktif: {selected[0]}")
+
+# ---------------------------------------------------------
+# TITLE LAB
+# ---------------------------------------------------------
+with tabs[1]:
+    st.header("🎯 Title Lab")
+    story_title = st.text_input(
+        "Cerita / angle",
+        value=st.session_state.get("story_title", "")
+    )
+    target = st.selectbox(
+        "Target",
+        ["Lokal Indonesia", "Local + Global", "Global"]
+    )
+    title_tone = st.selectbox(
+        "Tone",
+        ["Auto", "Satire", "Emotional", "Rebellious"]
+    )
+
+    if st.button("🚀 GENERATE PILIHAN JUDUL", use_container_width=True):
+        if not story_title.strip():
+            st.warning("Pilih cerita terlebih dahulu.")
+        else:
+            st.session_state.titles = title_candidates(
+                story_title, target, title_tone
+            )
+
+    if st.session_state.titles:
+        scored = [
+            (t, score_title(t, story_title, target))
+            for t in st.session_state.titles
+        ]
+        scored.sort(key=lambda x: x[1], reverse=True)
+
+        for i, (title, score) in enumerate(scored):
+            st.markdown(f"**{i+1}. {title}** — `{score}/50`")
+            if st.button(f"✅ GUNAKAN JUDUL #{i+1}", key=f"title_{i}"):
+                st.session_state.final_title = title
+
+        if st.session_state.final_title:
+            st.success(f"🔥 JUDUL AKTIF: {st.session_state.final_title}")
+
+        st.caption(
+            "Title Score adalah heuristic internal untuk membantu memilih kemasan judul. "
+            "Bukan jaminan ranking atau viral."
+        )
+
+# ---------------------------------------------------------
+# LYRIC LAB
+# ---------------------------------------------------------
+with tabs[2]:
+    st.header("✍️ Lyric Lab — Song Structure Engine V1.1")
+    st.markdown("""
+**Struktur inti:**
+- **0:00–0:05** Overture & Audio Hook
+- **0:05–0:30** Verse 1
+- **0:30–0:45** Pre-Chorus
+- **mulai 0:45** Chorus / Main Hook
+- Verse 2
+- Bridge — mystical
+- Final Chorus
+- Outro & Retention Loop
+""")
+
+    active_title = st.text_input(
+        "Judul Lagu",
+        value=st.session_state.get("final_title", st.session_state.get("story_title", ""))
+    )
+    active_story = st.session_state.get("story_body", "")
+
+    if st.button("🎤 GENERATE LIRIK V1.1", use_container_width=True):
+        if active_title.strip():
+            st.session_state.lyrics = generate_lyrics(
+                active_title, active_story, title_tone if "title_tone" in locals() else "Auto"
+            )
+        else:
+            st.warning("Pilih judul terlebih dahulu.")
+
+    lyrics = st.text_area(
+        "Lyrics — EDITABLE",
+        value=st.session_state.get("lyrics", ""),
+        height=520
+    )
+    st.session_state.lyrics = lyrics
+
+# ---------------------------------------------------------
+# SUNO
+# ---------------------------------------------------------
+with tabs[3]:
+    st.header("🎸 Suno Style — 3D GOKIL DNA")
+    st.code(suno_style())
+    st.caption("Style mengutamakan hook cepat, identitas Indonesian Cyber-Mystic Rock Dangdut, dan GOKIL satire.")
+
+# ---------------------------------------------------------
+# ARTWORK
+# ---------------------------------------------------------
+with tabs[4]:
+    st.header("🖼️ Artwork Prompt")
+    art_title = st.session_state.get("final_title", st.session_state.get("story_title", "JUDUL LAGU"))
+    art_story = st.session_state.get("story_body", "realita kehidupan di bumi")
+    st.markdown("**LONG — 16:9**")
+    st.code(artwork_prompt(art_title, art_story, "16:9"))
+    st.markdown("**SHORT — 9:16**")
+    st.code(artwork_prompt(art_title, art_story, "9:16"))
+
+# ---------------------------------------------------------
+# SEO
+# ---------------------------------------------------------
+with tabs[5]:
+    st.header("🚀 YouTube SEO")
+    seo_title = st.session_state.get("final_title", st.session_state.get("story_title", "JUDUL LAGU"))
+    seo_story = st.session_state.get("story_body", "")
+    description = f"""{seo_title} | 3D GOKIL
+
+Realita kehidupan di bumi, diceritakan serius tetapi tetap GOKIL.
+
+{seo_story}
+
+🔥 3D GOKIL — Indonesian Cyber-Mystic Rock Dangdut.
+
+#3DGOKIL #MusikIndonesia #RockDangdut #DangdutModern #IndonesianMusic"""
+
+    st.text_input("YouTube Title", value=seo_title)
+    st.text_area("Description", value=description, height=250)
+    st.text_input(
+        "Hashtags",
+        value="#3DGOKIL #MusikIndonesia #RockDangdut #DangdutModern #IndonesianMusic"
+    )
+    st.caption(
+        "SEO helper ini fokus pada kejelasan topik dan packaging. Jangan menganggap tags sebagai faktor utama discovery."
+    )
+
+st.divider()
+st.caption("3D GOKIL AI Music Factory V1.2 FINAL • V1 + V1.1 + Story/GOKIL + Title Lab")
