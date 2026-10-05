@@ -18,6 +18,7 @@ DNA_RULE = (
 
 st.title("🔥 3D GOKIL AI MUSIC FACTORY V1.2 FINAL")
 st.caption("V1 + Song Structure Engine + STORY/SUB-THEME LAB + GOKIL ENGINE + TITLE LAB")
+st.caption("🔥 V1.3 FINAL — 10 STORY ENGINE AKTIF")
 st.success("🔥 V1.3 — 10 STORY ENGINE AKTIF")
 
 st.info(
@@ -299,29 +300,19 @@ def score_title(title, story_title, target):
     return min(50, hook + remember + clarity + family + audience + musical)
 
 def generate_lyrics(title, story, tone):
-    return f"""[Intro — Overture & Audio Hook 0:00–0:05]
-[Direct shout + strong guitar + kendang]
-HEY! {title.upper()}!
-
-[Verse 1 — 0:05–0:30]
-{story}
-Kita jalan, kita tahan
-Meski hidup kadang kelewatan
-
-[Pre-Chorus — 0:30–0:45]
-Kalau berat, jangan hilang
-Tarik napas, tetap berjuang
-Kita manusia, bukan mesin
-Masih berdiri, masih yakin
-
-[Chorus / Main Hook — starts by 0:45]
-HIDUP SERIUS, TAPI GOKIL!
-Masalah datang, kita senyum kecil
-HIDUP SERIUS, TAPI GOKIL!
-Jatuh sekali, bangkit lagi!
-
-[Verse 2]
-Tagihan datang, deadline mengejar
-Kepala panas, tetap sadar
-Dunia kadang tidak masuk akal
-Kita tertawa biar tidak ti
+    # Built with a list instead of a triple-quoted string so copy/paste into GitHub
+    # cannot accidentally break the lyric string.
+    lines = [
+        "[Intro — Overture & Audio Hook 0:00–0:05]",
+        "[Direct shout + strong guitar + kendang]",
+        f"HEY! {title.upper()}!",
+        "",
+        "[Verse 1 — 0:05–0:30]",
+        story,
+        "Kita jalan, kita tahan",
+        "Meski hidup kadang kelewatan",
+        "",
+        "[Pre-Chorus — 0:30–0:45]",
+        "Kalau berat, jangan hilang",
+        "Tarik napas, tetap berjuang",
+        "Kita manus
