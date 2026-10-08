@@ -1,4 +1,0 @@
-streamlit>=1.40,<2
-google-api-python-client
-librosa>=0.10.2
-soundfile>=0.12.1
